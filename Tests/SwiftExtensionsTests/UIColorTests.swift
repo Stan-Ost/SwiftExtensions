@@ -1,4 +1,4 @@
-@testable import Extensions
+@testable import SwiftExtensions
 import XCTest
 
 final class UIColorTests: XCTestCase {
@@ -39,6 +39,6 @@ final class UIColorTests: XCTestCase {
     func test_initWithInvalidString_returnsDefaultWhiteColor() {
         let actualColor = UIColor(hexString: "870c9")
                 
-        XCTAssertTrue(actualColor.isEqualToColor(UIColorColor.foreground.value))
+        XCTAssertTrue(actualColor.isEqualToColor(UIColor.white))
     }
 }

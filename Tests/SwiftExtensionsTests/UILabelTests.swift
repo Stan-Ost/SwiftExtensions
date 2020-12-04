@@ -1,4 +1,4 @@
-@testable import Extensions
+@testable import SwiftExtensions
 import XCTest
 
 final class UILabelTests: XCTestCase {
