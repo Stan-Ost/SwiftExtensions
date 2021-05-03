@@ -54,3 +54,33 @@ public extension SKProductDiscount {
         return DateComponentsFormatter.localizedString(from: dateComponents, unitsStyle: .full)
     }
 }
+
+public extension SKError.Code {
+    var description: String {
+        switch self {
+        case .unknown: return "unknown"
+        case .clientInvalid: return "clientInvalid"
+        case .paymentCancelled: return "paymentCancelled"
+        case .paymentInvalid: return "paymentInvalid"
+        case .paymentNotAllowed: return "paymentNotAllowed"
+        case .storeProductNotAvailable: return "storeProductNotAvailable"
+        case .cloudServicePermissionDenied: return "cloudServicePermissionDenied"
+        case .cloudServiceNetworkConnectionFailed: return "cloudServiceNetworkConnectionFailed"
+        case .cloudServiceRevoked: return "cloudServiceRevoked"
+        case .privacyAcknowledgementRequired: return "privacyAcknowledgementRequired"
+        case .unauthorizedRequestData: return "unauthorizedRequestData"
+        case .invalidOfferIdentifier: return "invalidOfferIdentifier"
+        case .invalidSignature: return "invalidSignature"
+        case .missingOfferParams: return "missingOfferParams"
+        case .invalidOfferPrice: return "invalidOfferPrice"
+        case .overlayCancelled: return "overlayCancelled"
+        case .overlayInvalidConfiguration: return "overlayInvalidConfiguration"
+        case .overlayTimeout: return "overlayTimeout"
+        case .ineligibleForOffer: return "ineligibleForOffer"
+        case .unsupportedPlatform: return "unsupportedPlatform"
+        case .overlayPresentedInBackgroundScene: return "overlayPresentedInBackgroundScene"
+        @unknown default:
+            return "unknown"
+        }
+    }
+}
