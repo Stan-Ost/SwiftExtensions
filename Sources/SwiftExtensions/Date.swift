@@ -20,6 +20,10 @@ public extension Date {
         return components.day!
     }
     
+    var weekday: Int {
+        return components.weekday!
+    }
+    
     var month: Int {
         return components.month!
     }
