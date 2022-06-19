@@ -76,6 +76,17 @@ public extension Date {
         return dateComponents.date
     }
     
+    var startOfMonth: Date {
+        let calendar = Calendar(identifier: .gregorian)
+        let components = calendar.dateComponents([.year, .month], from: self)
+        
+        return  calendar.date(from: components) ?? self
+    }
+    
+    func adding(component: Calendar.Component, value: Int) -> Date {
+        Calendar.current.date(byAdding: component, value: value, to: self) ?? self
+    }
+
     private func round(precision: TimeInterval, rule: FloatingPointRoundingRule) -> Date {
         let seconds = (self.timeIntervalSinceReferenceDate / precision).rounded(rule) * precision
         return Date(timeIntervalSinceReferenceDate: seconds)
