@@ -34,3 +34,17 @@ public extension Array {
         return self[index]
      }
 }
+
+public extension Array where Element: Hashable {
+    // Returns a copy of the array where all values are unique. Preserves order of the original.
+    /// e.g. [‘a’, ‘b’, ‘a’, ‘c’].unique() == [‘a’, ‘b’, ‘c’]
+    public func unique() -> [Element] {
+        var uniqueValues: [Element] = .init()
+        for element in self {
+            if !uniqueValues.contains(element) {
+                uniqueValues.append(element)
+            }
+        }
+        return uniqueValues
+    }
+}
