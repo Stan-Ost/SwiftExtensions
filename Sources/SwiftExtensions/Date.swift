@@ -83,7 +83,7 @@ public extension Date {
         return  calendar.date(from: components) ?? self
     }
     
-    func endOfMonth() -> Date {
+    var endOfMonth -> Date {
         let calendar = Calendar(identifier: .gregorian)
         
         return calendar.date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonth()) ?? self
