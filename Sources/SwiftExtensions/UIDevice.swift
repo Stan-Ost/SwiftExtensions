@@ -3,6 +3,7 @@ import UIKit
 
 public enum DeviceType: String {
     case iPad = "iPad"
+    case iPhone5 = "iPhone 5, 5s, or SE"
     case iPhoneSE = "iPhone SE"
     case iPhone11 = "iPhone 11"
     case iPhone12 = "iPhone 12, 12 Pro"
@@ -21,6 +22,8 @@ public extension UIDevice {
             return .iPad
         } else {
             switch height() {
+            case 568:
+                return .iPhone5
             case 667:
                 return .iPhoneSE
             case 812:
@@ -31,8 +34,6 @@ public extension UIDevice {
                 return .iPhone11
             case 640, 736:
                 return .iPhone8plus
-            case 896:
-                return .iPhone11ProMax
             case 926:
                 return .iPhone12ProMax
             case 780:
