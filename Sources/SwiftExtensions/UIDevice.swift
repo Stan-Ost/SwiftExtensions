@@ -12,7 +12,8 @@ public enum DeviceType: String {
     case iPhone11ProMax = "iPhone 11 Pro Max"
     case iPhone12Mini = "iPhone 12 Mini"
     case iPhone8plus = "iPhone 6+, 6s+, 7+ or 8+"
-    case iPhone14Pro = "iPhone 14 Pro, 14 Pro Max"
+    case iPhone14Pro = "iPhone 14 Pro"
+    case iPhone14ProMax = "iPhone 14 Pro Max"
     case unknown = "unknown device"
 }
 
@@ -41,6 +42,8 @@ public extension UIDevice {
                 return .iPhone12Mini
             case 852:
                 return .iPhone14Pro
+            case 932:
+                return
             default:
                 return .unknown
             }
