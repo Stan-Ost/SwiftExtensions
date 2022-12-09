@@ -43,7 +43,7 @@ public extension UIDevice {
             case 852:
                 return .iPhone14Pro
             case 932:
-                return
+                return .iPhone14ProMax
             default:
                 return .unknown
             }
