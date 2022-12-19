@@ -1,3 +1,5 @@
+import Foundation
+
 public extension Data {
     var prettyPrintedJSONString: NSString? {
         guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
