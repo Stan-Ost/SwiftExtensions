@@ -8,5 +8,12 @@ public extension Bundle {
     var displayName: String {
         return object(forInfoDictionaryKey: "CFBundleDisplayName") as! String
     }
-}
 
+    var buildNumber: String {
+        return object(forInfoDictionaryKey: "CFBundleVersion") as! String
+    }
+
+    var fullVersion: String {
+        return "\(appVersion) (\(buildNumber))"
+    }
+}
